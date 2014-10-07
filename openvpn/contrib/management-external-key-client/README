@@ -1,0 +1,12 @@
+When given the --management-external-key option, OpenVPN does not use a private
+key to sign SSL handshakes, but instead requests a signature over the
+management interface.
+
+This is a simple client for the management interface that uses a private key
+stored in a PEM file to create the signatures.
+
+You'll need PolarSSL to compile this code. Run management_external_key for
+instructions.
+
+Note that this is not production-ready code. It may, however, be useful for
+testing purposes.
