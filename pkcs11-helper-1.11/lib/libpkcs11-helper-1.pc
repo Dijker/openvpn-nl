@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+features= debug threading token data certificate slotevent openssl engine_crypto_openssl engine_crypto_nss engine_crypto_polarssl engine_crypto_cryptoapi engine_crypto_gnutls engine_crypto
+
+Name: pkcs11-helper
+Description: PKCS#11 helper library
+Version: 1.11
+Cflags: -I${includedir}
+Libs: -lpthread -ldl  -lcrypto   -L${libdir} -lpkcs11-helper
