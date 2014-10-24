@@ -282,7 +282,7 @@ AC_ARG_WITH(
 	[crypto-library],
 	[AS_HELP_STRING([--with-crypto-library=library], [build with the given crypto library, TYPE=openssl|polarssl @<:@default=openssl@:>@])],
 	[
-		case "${withval}" in 
+		case "${withval}" in
 			openssl|polarssl) ;;
 			*) AC_MSG_ERROR([bad value ${withval} for --with-crypto-library]) ;;
 		esac
@@ -737,7 +737,7 @@ esac
 
 PKG_CHECK_MODULES(
 	[PKCS11_HELPER],
-	[libpkcs11-helper-1 >= 1.11],
+	[libpkcs11-helper-1 >= 1.10],
 	[have_pkcs11_helper="yes"],
 	[]
 )
